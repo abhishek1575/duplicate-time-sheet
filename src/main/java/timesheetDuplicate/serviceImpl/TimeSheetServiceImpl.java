@@ -64,20 +64,7 @@ public class TimeSheetServiceImpl implements TimeSheetService {
         return toDto(timeSheetRepo.save(ts));
     }
 
-//    @Transactional
-//    @Override
-//    public TimeSheetDto updateSheet(Long id, TimeSheetDto dto) {
-//        TimeSheet ts = timeSheetRepo.findById(id).orElseThrow(() -> new RuntimeException("Sheet not found"));
-//        if (ts.getStatus() != SheetStatus.DRAFT && ts.getStatus() != SheetStatus.REVISED) {
-//            throw new RuntimeException("Cannot update submitted/approved sheet");
-//        }
-//        ts.setTaskName(dto.getTaskName());
-//        ts.setStartDate(dto.getStartDate());
-//        ts.setEndDate(dto.getEndDate());
-//        ts.setEffort(dto.getEffort());
-//        ts.setProject(dto.getProject());
-//        return toDto(timeSheetRepo.save(ts));
-//    }
+
 
     @Transactional
     @Override
